@@ -1,11 +1,10 @@
 #!/bin/bash
 
 . ./prelude.sh
-. ./build-millau-node.sh
-. ./build-rialto-node.sh
-# . ./build-ethereum-relay.sh
+. ./build-tang-node.sh
+. ./build-song-node.sh
 . ./build-substrate-relay.sh
 
-bash ./start-rialto.sh
-bash ./start-millau.sh
+bash ./start-song.sh
+bash ./start-tang.sh
 # bash ./start-dashboards.sh

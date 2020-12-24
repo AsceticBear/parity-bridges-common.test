@@ -1,29 +1,29 @@
 scrape_configs:
-  - job_name: 'poa2rialto_relay'
+  - job_name: 'poa2song_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9650']
-  - job_name: 'poa2rialto_exchange_relay'
+  - job_name: 'poa2song_exchange_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9651']
-  - job_name: 'rialto2poa_relay'
+  - job_name: 'song2poa_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9653']
-  - job_name: 'millau2rialto_relay'
+  - job_name: 'tang-node2song_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9700']
-  - job_name: 'rialto2millau_relay'
+  - job_name: 'song2tang-node_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9701']
-  - job_name: 'millau2rialto_00000000_lane_relay'
+  - job_name: 'tang-node2song_00000000_lane_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9702']
-  - job_name: 'rialto2millau_00000000_lane_relay'
+  - job_name: 'song2tang-node_00000000_lane_relay'
     scrape_interval: 15s
     static_configs:
       - targets: ['127.0.0.1:9703']

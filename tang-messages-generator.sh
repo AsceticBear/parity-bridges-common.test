@@ -2,21 +2,21 @@
 
 # THIS SCRIPT IS NOT INTENDED FOR USE IN PRODUCTION ENVIRONMENT
 #
-# This scripts periodically calls relay binary to generate Millau -> Rialto
+# This scripts periodically calls relay binary to generate Tang -> Song
 # messages.
 
 set -eu
 
 # Path to relay binary
 RELAY_BINARY_PATH=./bin/substrate-relay
-# Millau node host
-MILLAU_HOST=127.0.0.1
-# Millau node port
-MILLAU_PORT=10946
-# Millau signer
-MILLAU_SIGNER=//Dave
-# Rialto signer
-RIALTO_SIGNER=//Dave
+# Tang node host
+TANG_HOST=127.0.0.1
+# Tang node port
+TANG_PORT=10946
+# Tang signer
+TANG_SIGNER=//Dave
+# Song signer
+SONG_SIGNER=//Dave
 # Max delay before submitting transactions (s)
 MAX_SUBMIT_DELAY_S=60
 # Lane to send message over
@@ -36,12 +36,12 @@ do
 	FEE=100000000
 
 	# submit message
-	echo "Sending message from Millau to Rialto"
-	$RELAY_BINARY_PATH 2>&1 submit-millau-to-rialto-message \
-		--millau-host=$MILLAU_HOST\
-		--millau-port=$MILLAU_PORT\
-		--millau-signer=$MILLAU_SIGNER\
-		--rialto-signer=$RIALTO_SIGNER\
+	echo "Sending message from Tang to Song"
+	$RELAY_BINARY_PATH 2>&1 submit-tang-to-song-message \
+		--tang-host=$TANG_HOST\
+		--tang-port=$TANG_PORT\
+		--tang-signer=$TANG_SIGNER\
+		--song-signer=$SONG_SIGNER\
 		--lane=$LANE\
 		--message=$MESSAGE\
 		--fee=$FEE
